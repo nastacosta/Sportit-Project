@@ -1,0 +1,695 @@
+:root {
+    --violeta: #8B48BF;
+    --violeta-transparente: rgba(140, 74, 191, 0.3);
+    --celeste: #3CDDF3;
+    --grisazul-oscuro: #1E1E26;
+    --azul-oscuro: #242E52;
+    --gris-claro: rgb(249, 249, 249);
+    --gris: #B3B2B7;
+    --gris-oscuro: #8C8C94;
+    --delimiter: rgb(255, 0, 0) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+@keyframes aparecer-1 {
+
+    0%{
+        opacity: 0;
+        transform: translate(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes aparecer-imagen {
+
+    0%{
+        opacity: 0;
+        scale: 1.3;
+        transform: translate(200px);
+    }
+    100% {
+        scale: 1;
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes aparecer-texto {
+
+    0%{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+html, body { /* para eliminar bordes por defecto */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Be Vietnam Pro';
+    overflow-x: hidden;
+}
+
+header {
+    height: 12vw;
+    padding: 0 12vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburguer {
+    display: none;
+}
+
+header nav {
+    display: flex;
+    gap: 1.5vw;
+}
+
+header nav button, .footer-btn {
+    transition: all ease 0.2s;
+    background-color: transparent;
+    border: none;
+    font-size: 0.95vw;
+    color: var(--azul-oscuro);
+    letter-spacing: -0.05vw;
+    font-weight: 500;
+}
+
+header nav button:hover, .footer-btn:hover {
+    opacity: 0.6;
+    scale: 1.15;
+}
+
+.logo {
+    height: 1.9vw;
+}
+
+button {
+    font-family: 'Be Vietnam Pro';
+    cursor: pointer;
+}
+
+.shadowed {
+    box-shadow: 0px 4px 7px 0px #00000040;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43vw;
+}
+
+main section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 75%;
+    width: 76%;
+}
+
+main section img {
+    transition: all ease 0.3s;
+    width: 50%;
+    object-fit: contain;
+    animation-name: aparecer-imagen;
+    animation-duration: 1.3s;
+}
+
+main section article {
+    width: 42%;
+    padding-left: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    text-align: right;
+    animation-name: aparecer-texto;
+    animation-duration: 1.2s;
+}
+
+.main-title {
+    text-align: right;
+    font-weight: 700;
+    font-size: 3.3vw;
+    letter-spacing: -0.1vw;
+    color: var(--azul-oscuro);
+    margin: unset;
+    margin-bottom: 1.5vw;
+}
+
+.main-text {
+    font-weight: 500;
+    font-size: 1.15vw;
+    line-height: 1.9vw;
+    padding-left: 1vw;
+    margin-bottom: 2vw;
+}
+
+.default-button {
+    background-color: var(--violeta);
+    border: transparent;
+    padding: 0.9vw 2.7vw;
+    font-size: 1vw;
+    border-radius: 2.3vw;
+    color: white;
+}
+
+.default-button:hover, footer form button:hover {
+    opacity: 70%;
+}
+
+.first-frame, .second-frame {
+    height: 12vw;
+    padding: 0 3vw;
+    background-color: var(--violeta);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.first-frame h2 {
+    font-size: 2.4vw;
+    width: 34%;
+}
+
+.first-frame p {
+    width: 36%;
+    line-height: 1.7vw;
+    font-size: 1.15vw;
+}
+
+.count-section {
+    background-color: var(--gris-claro);
+    height: 24vw;
+    padding: 3vw 5vw;
+    margin-bottom: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1vw;
+}
+
+.count-section article {
+    position: relative;
+    width: 45%;
+}
+
+.count-section article div {
+    height: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+.count-section article span {
+    background-color: var(--violeta);
+    overflow: hidden;
+    color: white;
+    padding: 0 2vw;
+    font-size: 1.1vw;
+    height: 100%;
+    line-height: 3.3vw;
+    border-radius: 2vw;
+    font-weight: 700;
+}
+
+.count-section article div h4 {
+    color: var(--azul-oscuro);
+    position: absolute;
+    margin-left: 7vw;
+    font-size: 1.1vw;
+}
+
+.count-section article p {
+    color: var(--gris);
+    margin-left: 7vw;
+    font-size: 1.1vw;
+    line-height: 1.7vw;
+    font-weight: 400;
+    width: 75%;
+}
+
+.bestofmonth-section {
+    position: relative;
+    height: 44vw;
+    margin-bottom: 4.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bestofmonth-section h2 {
+    position: absolute;
+    top: 1.5vw;
+    text-indent: 5vw;
+    font-size: 2.7vw;
+    letter-spacing: -0.1vw;
+    color: var(--azul-oscuro);
+}
+
+.player-box {
+    width: 27.5%;
+    background-color: var(--gris-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.3vw 0vw 1.3vw;
+}
+
+.player-box img {
+    width: 5vw;
+    position: relative;
+    top: -2.5vw;
+}
+
+.player-box h4 {
+    color: var(--azul-oscuro);
+    position: relative;
+    top: -0.5vw;
+    margin: 0;
+    font-size: 1.15vw;
+    letter-spacing: -0.05vw;
+}
+
+.player-box p {
+    color: var(--gris);
+    font-size: 1.1vw;
+    line-height: 1.7vw;
+    text-align: center;
+}
+
+.more-button {
+    position: absolute;
+    bottom: 8vw;
+    padding-inline: 3.6vw;
+}
+
+.second-frame {
+    height: 15.4vw;
+    justify-content: space-between;
+    padding: 0.1vw 14.5vw 0 11vw;
+}
+
+.second-frame h2 {
+    font-size: 2.7vw;
+    width: 30vw;
+}
+
+.blanco {
+    background-color: white;
+    color: var(--violeta);
+}
+
+footer {
+    position: relative;
+    background-color: var(--grisazul-oscuro);
+    height: 11.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 4vw 0 2vw 11.3vw;
+}
+
+.logo-row {
+    margin-top: 5.7vw;
+    display: flex;
+    gap: 1vw;
+}
+
+.logo-row img {
+    transition: all ease 0.2s;
+    height: 1.4vw;
+}
+
+.logo-row img:hover {
+    opacity: 0.6;
+    scale: 1.2;
+}
+
+.footer-btn-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-btn {
+    color: white;
+    margin-bottom: 1vw;
+    font-size: 1.1vw;
+    font-weight: 400;
+}
+
+footer form {
+    margin-top: 0.2vw;
+    margin-bottom: 2vw;
+    height: 3.05vw;
+    display: flex;
+    gap: 0.7vw;
+}
+
+footer form input {
+    border: none;
+    border-radius: 2.3vw;
+    width: 13.5vw;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 500;
+    font-size: 0.9vw;
+    text-indent: 0.5vw;
+}
+
+footer form input::placeholder {
+    color: var(--gris);
+}
+
+footer form input:focus::placeholder {
+    opacity: 0;
+}
+
+footer form button {
+    height: 100%;
+    color: white;
+    text-align: center;
+    background-color: var(--violeta);
+    border-radius: 2.3vw;
+    border: none;
+    font-size: 0.9vw;
+    padding-inline: 1.6vw;
+}
+
+.copy {
+    position: absolute;
+    font-size: 0.9vw;
+    color: var(--gris-oscuro);
+    bottom: 1.9vw;
+    right: 11vw;
+    letter-spacing: -0.02vw;
+}
+
+@media (max-width: 600px) {
+
+    
+@keyframes aparecer-imagen {
+
+    0%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+    
+    header nav, header button {
+        display: none;
+    }
+
+    .hamburguer {
+        display: block;
+        background-color: transparent;
+    }
+
+    .hamburguer img {
+        height: 6vw;
+    }
+
+    header {
+        height: 25vw;
+    }
+
+    .logo {
+        height: 6vw;
+    }
+
+    main {
+        height: 187vw;
+    }
+    
+    main section {
+        flex-direction: column;
+        gap: 10vw;
+        justify-content: center;
+        align-items: center;
+        scale: 2.15;
+    }
+
+    main section article {
+        padding: 0;
+        width: 50%;
+    }
+
+    .main-title {
+        font-size: 4.5vw;
+        letter-spacing: -0.2vw;
+    }
+
+    .main-text {
+        font-size: 1.57vw;
+        line-height: 2.3vw;
+    }
+
+    .default-button {
+        font-size: 1.3vw;
+        padding: 1.3vw 3.6vw;
+    }
+
+    .first-frame, .second-frame {
+        background-color: var(--celeste);
+        flex-direction: column;
+        align-items: flex-start;
+        height: 60vw;
+        padding: 0 3vw 3vw 3vw;
+    }
+
+    .first-frame h2 {
+        font-size: 7vw;
+        width: 70%;
+    }
+
+    .first-frame p {
+        width: 90%;
+        line-height: 5vw;
+        font-size: 3.3vw;
+        font-weight: 400;
+    }
+
+    .first-frame p span {
+        display: none;
+    }
+    .first-frame p:after {
+        content: "Manage provides all the functionality your ㅤㅤㅤ teas needs, without the complexity. Our software is tailor-made for modern digital product teams";
+    }
+
+    .count-section {
+        background-color: transparent;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 160vw;
+        padding: 3vw 0 3vw 7vw;
+        margin-bottom: 0;
+    }
+
+    .count-section article {
+        position: relative;
+        width: 100%;
+    }
+
+    .count-section article div {
+        background-color: var(--violeta-transparente);
+        border-top-left-radius: 5vw;
+        border-bottom-left-radius: 5vw;
+        height: 9vw;
+    }
+
+    .count-section article div h4 {
+        font-size: 3.2vw;
+        margin-left: 18vw;
+        letter-spacing: -0.1vw;
+        top: -1vw;
+    }
+
+    .count-section article span {
+        font-size: 3vw;
+        padding: 0 5.5vw;
+        line-height: 10vw;
+        border-radius: 5vw;
+    }
+
+    .count-section article p {
+        font-size: 3.3vw;
+        line-height: 5.3vw;
+        width: 92%;
+        margin-left: 2vw;
+        padding: 2.5vw 0;
+    }
+
+    .bestofmonth-section {
+        height: 110vw;
+        margin-bottom: 0;
+    }
+
+    .bestofmonth-section h2 {
+        font-size: 8vw;
+        text-indent: -2vw;
+        top: -5.3vw;
+        letter-spacing: -0.2vw;
+    }
+
+    .player-box:first-of-type, .player-box:last-of-type {
+        display: none;
+    }
+
+    .player-box {
+        scale: 3.09;
+        height: 14vw;
+    }
+
+    .player-box h4 {
+        top: -1vw;
+    }
+
+    .player-box p {
+        position: relative;
+        top: -1.4vw;
+        font-size: 1.12vw;
+        line-height: 1.8vw;
+        scale: 0.95;
+    }
+
+    .more-button, .second-frame button {
+        bottom: 13vw;
+        font-size: 3vw;
+        border-radius: 5vw;
+        padding: 3vw 10vw;
+    }
+
+    .second-frame {
+        align-items: center;
+        height: 59.5vw;
+        padding: 3.5vw 5vw 7vw 5vw;
+    }
+
+        
+    .second-frame h2 {
+        font-size: 7vw;
+        width: 65%;
+        text-align: center;
+    }
+
+    .second-frame h2 span {
+        display: none;
+    }
+
+    .second-frame h2::after {
+        content: "Get to know the \A best \A teams of the year";
+        white-space: pre-wrap;
+    }
+
+    .second-frame button {
+        background-color: var(--azul-oscuro);
+        color: white;
+        scale: 0.85;
+    }
+
+    footer {
+        position: relative;
+        height: 84vw;
+        padding: 10vw 12vw;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    footer form {
+        order: -4;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 9vw;
+        width: 100%;
+        display: flex;
+        gap: 1.8vw;
+    }
+
+    .footer-btn {
+        margin-bottom: 3vw;
+        font-size: 3.1vw;
+        opacity: 0.9;
+    }
+
+    footer span:first-of-type {
+        order: -3;
+        margin-right: 12.5vw;
+    }
+
+    footer span:last-of-type {
+        order: -2;
+        margin-left: 12.5vw;
+    }
+    
+    .logo-row {
+        order: -1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 1vw;
+        margin-top: 0;
+    }
+    
+    .logo-row img {
+        transition: all ease 0.2s;
+        height: 4vw;
+    }
+
+    footer form input {
+        border: none;
+        border-radius: 7vw;
+        width: 78%;
+        font-family: 'Be Vietnam Pro';
+        font-weight: 500;
+        font-size: 2.8vw;
+        text-indent: 1.2vw;
+    }
+
+    footer form button {
+        height: 100%;
+        color: white;
+        border-radius: 7vw;
+        font-size: 2.4vw;
+        padding-inline: 5vw;
+    }
+
+    footer .logo {
+        scale: 0.8;
+    }
+
+    .copy {
+        font-size: 2.4vw;
+        bottom: 5vw;
+        right: unset;
+        letter-spacing: -0.02vw;
+    }
+
+}
